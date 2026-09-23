@@ -63,6 +63,43 @@ Safe Patch Application
 - A stable internet connection (analysis runs via the Gemini API — no local model hosting or GPU required)
 - Minimum 4 GB RAM (8 GB recommended)
 
+## Setup
+
+1. **Clone the repository:**
+
+   ```
+   git clone <your-repo-url>
+   cd Sentinel
+   ```
+
+2. **Install dependencies:** Ensure Python is installed, then install the required packages (including the Gemini API dependencies):
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. **Configure the API Key:**
+   - Generate your API key from Google AI Studio.
+   - Create a file named `.env` in the root project folder.
+   - Add your key to the file using this exact format:
+
+     ```
+     GEN_KEY=your_api_key_here
+     ```
+
+4. **Configure the Executable:**
+   - Open the `.bat` file provided in the repository.
+   - Update the path inside the file to point to the exact location of the Sentinel script on your local machine.
+
+5. **Set Environment Variables:**
+   - Add the folder containing your configured `.bat` file to your system's `PATH` environment variable. This allows you to run the CLI globally from any directory.
+
+6. **Run the Application:**
+   - Open Command Prompt and initialize a scan:
+
+     ```
+     sentinel --path <Folder_path> --mode <Audit/Repair>
+     ```
 ## Usage
 
 ```bash
